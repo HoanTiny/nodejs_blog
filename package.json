@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoanTiny/nodejs_blog.git"
+  },
+  "keywords": [
+    "blog",
+    "nodejs"
+  ],
+  "author": "hoantiny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoanTiny/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/HoanTiny/nodejs_blog#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
