@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "beautiful": "lint-staged",
     "start": "node src/index.js",
     "dev": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
@@ -23,12 +24,24 @@
     "url": "https://github.com/HoanTiny/nodejs_blog/issues"
   },
   "homepage": "https://github.com/HoanTiny/nodejs_blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --write --single-quote --tab-width 4 --trailing-comma all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^7.1.2"
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^8.3.4"
   },
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "node-sass": "^9.0.0",
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.5"
   }
 }

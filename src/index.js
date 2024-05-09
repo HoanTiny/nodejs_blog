@@ -5,6 +5,10 @@ const app = express();
 const port = 3006;
 
 const route = require("./routes");
+const db = require("./config/db");
+
+// Connect to DB
+db.connect();
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -14,7 +18,6 @@ app.use(
   })
 );
 app.use(express.json());
-//Template engine
 // app.engine("handlebars", handlebars());
 app.engine(
   "hbs",
